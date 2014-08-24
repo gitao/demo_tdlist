@@ -1,0 +1,43 @@
+﻿@model Todolist.Models.TodolistModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" type="text/css" href="/Content/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="/Content/css/tdl.css" />
+    <script type="text/javascript" src="/Scripts/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery-ui-1.8.24.min.js"></script>
+    <script type="text/javascript" src="/Content/js/tdl.js"></script>
+</head>
+<body>
+    <div id="main">
+        <h1>To-Do List</h1>
+        <ul class="todoList">
+        @foreach (var item in Model.TDList)
+        {
+            <li id="todo-@item.Id" class="todo">
+                <div class="text @(item.complete ? "complete" : "")">@item.item</div>
+                <div class="actions">
+                    <a href="#" class="edit" @(item.complete ? "style=display:none" : "") title="Edit">Edit</a>
+                    <a href="#" class="complete" @(item.complete ? "style=display:none" : "") title="Complete">Complete</a>
+                    <a href="#" class="restore" @(item.complete ? "" : "style=display:none") title="Restore">Restore</a>
+                    <a href="#" class="delete" title="Delete">Delete</a>
+                </div>
+            </li>
+        }            
+        </ul>
+
+        <a id="addButton" class="green-button" href="#">Add a To-Do Item</a>
+    </div>
+
+    <div id="dialog-confirm" title="Delete To-Do List Item?">Are you sure you want to delete to-do list item?</div>
+    <div id="dialog-add" title="Add To-Do List Item">
+        <input type="text" maxlength="150" size="33" id="txt_additem" />
+    </div>
+</body>
+</html>
+

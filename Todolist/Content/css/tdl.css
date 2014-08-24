@@ -1,0 +1,200 @@
+﻿*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	font-size:0.825em;
+	color:#666;
+	background-color:#fff;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+ul.todoList{
+	margin:0 auto;
+	width:500px;
+	position:relative;
+}
+
+ul.todoList li{
+	background-color:#F9F9F9;
+	border:1px solid #EEEEEE;
+	list-style:none;
+	margin:6px;
+	padding:6px 9px;
+	position:relative;
+	cursor:n-resize;
+
+	
+	text-shadow:1px 1px 0 white;
+	
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+}
+
+ul.todoList li:hover{
+	border-color:#808080;
+	
+	-moz-box-shadow:0 0 5px #808080;
+	-webkit-box-shadow:0 0 5px #808080;
+	box-shadow:0 0 5px #808080;
+}
+
+ul.todoList div.complete{
+    text-decoration: line-through;
+}
+
+.todo .text{
+	color:#777777;
+	font-size:1.4em;
+    width:400px;
+
+    white-space: pre-wrap;      /* CSS3 */   
+    white-space: -moz-pre-wrap; /* Firefox */    
+    white-space: -pre-wrap;     /* Opera <7 */   
+    white-space: -o-pre-wrap;   /* Opera 7 */    
+    word-wrap: break-word;      /* IE */
+}
+	
+.todo .actions{
+	position:absolute;
+	right:7px;
+	top:6px;
+}
+
+.todo .actions a{
+	display:block;
+	width:16px;
+	height:16px;
+	overflow:hidden;
+	float:left;
+	text-indent:-9999px;
+	margin:3px;
+}
+
+.todo .actions a.edit{
+	background:url("/Content/img/edit.png") no-repeat center center;
+}
+
+.todo .actions a.delete{
+	background:url("/Content/img/delete.png") no-repeat center center;
+}
+
+.todo .actions a.complete{
+	background:url("/Content/img/x_icon.png") no-repeat center center;
+}
+
+.todo .actions a.restore{
+	background:url("/Content/img/restore.png") no-repeat center center;
+}
+
+.todo input{
+	border:1px solid #CCCCCC;
+	color:#666666;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:0.725em;
+	padding:3px 4px;
+	width:300px;
+}
+
+.editTodo{
+	display:inline;
+	font-size:0.6em;
+	padding-left:9px;
+}
+
+.editTodo a{
+	font-weight:bold;
+}
+
+a.discardChanges{
+	color:#C00 !important;
+}
+
+a.saveChanges{
+	color:#4476CC !important;
+}
+
+.ui-button,.ui-dialog-titlebar{
+	font-size:0.72em !important;
+}
+
+#dialog-confirm{
+	display:none;
+	font-size:0.9em;
+	padding:1em 1em 0;
+}
+
+#addButton{
+	margin:20px auto;
+}
+
+
+a.green-button,
+a.green-button:visited{
+	color:white;
+	display:block;
+	font-size:13px;
+	font-weight:bold;
+	height:40px;
+    width:120px;
+	padding:11px 0px 0px;
+	text-align:center;
+		
+	background:url("/Content/img/button.png") no-repeat;
+}
+
+a.green-button:hover{
+	text-decoration:none;
+	/*background-position:left bottom;*/
+}
+
+#main{
+	position:relative;
+	margin:0 auto;
+	width:960px;
+}
+
+h1{
+	/*background-color: #F8F8F8;*/
+	font-size: 32px;
+	line-height: 1.35;
+	margin-bottom: 30px;
+	padding: 30px 0 20px;
+	text-align: center;
+	text-shadow: 0 1px 1px white;
+}
+
+h2{
+	font-size: 16px;
+	font-weight: normal;
+	position: relative;
+	text-align: center;
+	top: -73px;
+}
+
+h1,h2{
+	font-family:"Myriad Pro",Arial,Helvetica,sans-serif;
+}
+
+.note{
+	font-size:12px;
+	font-style:italic;
+	padding-bottom:20px;
+	text-align:center;
+}
+
+a, a:visited {
+	color:#0196e3;
+	text-decoration:none;
+	outline:none;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+
+a img{
+	border:none;
+}
