@@ -1,9 +1,11 @@
 bin/
 obj/
 packages/
+.vs/
 TestResults/
 *.suo
 *.csproj.user
 *.sln.docstates
 *.VisualState.xml
 Thumbs.db
+UpgradeLog*.htm
